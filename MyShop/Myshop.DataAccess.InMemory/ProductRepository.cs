@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Caching;
 using MyShop.Core.Models;
-namespace Myshop.DataAccess.InMemory
+namespace MyShop.DataAccess.InMemory
 {
 	public class ProductRepository
 	{
@@ -51,7 +51,7 @@ namespace Myshop.DataAccess.InMemory
 				throw new Exception("Product not found");
 		}
 
-		public IQueryable Collection()
+		public IQueryable<Product> Collection()
 		{
 			return products.AsQueryable();
 		}

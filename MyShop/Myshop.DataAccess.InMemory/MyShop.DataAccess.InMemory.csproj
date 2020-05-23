@@ -7,7 +7,7 @@
     <ProjectGuid>{D08677F7-5996-465C-9C6F-B529D3775671}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Myshop.DataAccess.InMemory</RootNamespace>
+    <RootNamespace>MyShop.DataAccess.InMemory</RootNamespace>
     <AssemblyName>Myshop.DataAccess.InMemory</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
