@@ -5,7 +5,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4F48F41E-9AC7-4300-9094-25B2C438E9A2}</ProjectGuid>
+    <ProjectGuid>{5441B467-8CD4-43FC-867B-A2CA0A082DAC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MyShop.WebUI.Tests</RootNamespace>
@@ -92,7 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyShop.WebUI\MyShop.WebUI.csproj">
-      <Project>{6EFF0E5E-0D15-481C-B705-5C98E196D7F2}</Project>
+      <Project>{F27575FF-882F-4340-BEB7-BDB3DBE8602C}</Project>
       <Name>MyShop.WebUI</Name>
     </ProjectReference>
   </ItemGroup>
