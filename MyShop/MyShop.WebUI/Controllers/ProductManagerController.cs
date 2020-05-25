@@ -5,20 +5,20 @@ using System.Web;
 using System.Web.Mvc;
 using MyShop.Core.Models;
 using MyShop.Core.ViewModels;
-
 using MyShop.DataAccess.InMemory;
+using MyShop.Core.Contracts;
 
 namespace MyShop.WebUI.Controllers
 {
 	public class ProductManagerController : Controller
 	{
-		InMemoryRepository<Product> context;
-		InMemoryRepository<ProductCategory>   categoriesContext;
+		IRepository<Product> context;
+		IRepository<ProductCategory>   categoriesContext;
 
-		public ProductManagerController()
+		public ProductManagerController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoryContext)
 		{
-			context = new InMemoryRepository<Product>();
-			categoriesContext = new InMemoryRepository<ProductCategory>();
+			context = productContext;
+			categoriesContext = productCategoryContext;
 		}
 
 		public ActionResult Index()
