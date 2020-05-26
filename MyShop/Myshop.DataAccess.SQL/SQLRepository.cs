@@ -11,8 +11,8 @@ namespace Myshop.DataAccess.SQL
 {
 	public class SQLRepository<T> : IRepository<T> where T : BaseEntity
 	{
-		internal DataContext context;
-		internal DbSet<T> dbSet;
+		DataContext context;
+		DbSet<T> dbSet;
 
 		public SQLRepository(DataContext context)
 		{
@@ -31,7 +31,7 @@ namespace Myshop.DataAccess.SQL
 
 		public void Delete(string Id)
 		{
-			T t= Find(Id);
+			T t = Find(Id);
 			if (context.Entry(t).State == EntityState.Detached)
 				dbSet.Attach(t);
 
@@ -40,7 +40,12 @@ namespace Myshop.DataAccess.SQL
 
 		public T Find(string Id)
 		{
-			return dbSet.Find(Id);
+			T t = dbSet.FirstOrDefault<T>(x => x.Id == Id);
+
+			if (t == null)
+				throw new Exception("Not found");
+			else
+				return t;
 		}
 
 		public void Insert(T tEntity)
